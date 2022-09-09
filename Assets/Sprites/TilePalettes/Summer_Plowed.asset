@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: sokoban_tilesheet_88
+  m_Name: Summer_Plowed
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 9106956010813669412, guid: 4dc26e4ee463c1445b24c242854de248,
     type: 3}
