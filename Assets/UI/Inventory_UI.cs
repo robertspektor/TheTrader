@@ -1,65 +1,70 @@
-using System.Collections;
 using System.Collections.Generic;
+using Core;
+using Manager;
 using UnityEngine;
 
-public class Inventory_UI : MonoBehaviour
+namespace UI
 {
-    public GameObject inventoryPanel;
-
-    public Player player;
-
-    public List<Slots_UI> slots = new List<Slots_UI>();
-
-    void Update()
+    public class Inventory_UI : MonoBehaviour
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            ToggleInventory();
-        }
-    }
+        public GameObject inventoryPanel;
 
-    public void ToggleInventory()
-    {
-        // toggle inventory
-        if (inventoryPanel.activeSelf)
-        {
-            inventoryPanel.SetActive(false);
-        }
-        else
-        {
-            inventoryPanel.SetActive(true);
-            Refresh();
-        }
-    }  
+        public Player player;
 
-    public void Refresh()
-    {
-        if (slots.Count == player.inventory.slots.Count)  {
-            for (int i = 0; i < slots.Count; i++)
+        public List<Slots_UI> slots = new List<Slots_UI>();
+
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Tab))
             {
-                if (player.inventory.slots[i].type != CollectableType.NONE)
+                ToggleInventory();
+            }
+        }
+
+        public void ToggleInventory()
+        {
+            // toggle inventory
+            if (inventoryPanel.activeSelf)
+            {
+                inventoryPanel.SetActive(false);
+            }
+            else
+            {
+                inventoryPanel.SetActive(true);
+                Refresh();
+            }
+        }  
+
+        public void Refresh()
+        {
+            if (slots.Count == player.inventory.slots.Count)  {
+                for (int i = 0; i < slots.Count; i++)
                 {
-                    slots[i].SetItem(player.inventory.slots[i]);
-                }
-                else
-                {
-                    slots[i].ClearSlot();
+                    if (player.inventory.slots[i].itemName != "")
+                    {
+                        slots[i].SetItem(player.inventory.slots[i]);
+                    }
+                    else
+                    {
+                        slots[i].ClearSlot();
+                    }
                 }
             }
         }
-    }
     
-    public void Remove(int slotID)
-    {
-        Collectable itemToDrop = GameManager.instance.itemManager.GetItemByType(
-            player.inventory.slots[slotID].type
-        );
-
-        if (itemToDrop != null)
+        public void Remove(int slotID)
         {
-            player.DropItem(itemToDrop);
-            player.inventory.RemoveItem(slotID);
-            Refresh();
+            Debug.Log("Remove");
+            Item itemToDrop = GameManager.instance.itemManager.GetItemByName(
+                player.inventory.slots[slotID].itemName
+            );
+
+            if (itemToDrop != null)
+            {
+                player.DropItem(itemToDrop);
+                player.inventory.RemoveItem(slotID);
+                Refresh();
+            }
         }
     }
 }
