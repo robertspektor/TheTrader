@@ -38,5 +38,13 @@ namespace Core
             Item droppedItem = Instantiate(item, dropPosition + dropOffset, Quaternion.identity);
             droppedItem.rb.AddForce(dropOffset * .2f, ForceMode2D.Impulse);
         }
+        
+        public void DropItem(Item item, int qty)
+        {
+            for (int i = 0; i < qty; i++)
+            {
+                DropItem(item);
+            }
+        }
     }
 }

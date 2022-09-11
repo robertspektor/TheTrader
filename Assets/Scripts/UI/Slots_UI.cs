@@ -10,6 +10,9 @@ namespace UI
 
         public Image itemIcon;
         public TextMeshProUGUI amountText;
+        public int slotId;
+        
+        [SerializeField] private GameObject highlight;
 
         public void SetItem(Inventory.Slot slot)
         {
@@ -25,6 +28,11 @@ namespace UI
             itemIcon.sprite = null;
             itemIcon.color = new Color(1, 1, 1, 0);
             amountText.text = "";
+        }
+        
+        public void toggleHightlight()
+        {
+            highlight.SetActive(!highlight.activeSelf);
         }
     }
 }

@@ -88,5 +88,16 @@ namespace Core
         {
             slots[index].RemoveItem();
         }
+        
+        public void RemoveItem(int index, int qty)
+        {
+            if (slots[index].amount >= qty)
+            {
+                for (int i = 0; i < qty; i++)
+                {
+                    RemoveItem(index);
+                }
+            }
+        }
     }
 }

@@ -44,10 +44,11 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
-     <Compile Include="Assets\UI\Inventory_UI.cs" />
+     <Compile Include="Assets\Scripts\UI\Inventory_UI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\ItemData.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
-     <Compile Include="Assets\UI\Slots_UI.cs" />
+     <Compile Include="Assets\Scripts\UI\Slots_UI.cs" />
      <Compile Include="Assets\Scripts\Core\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Core\Inventory.cs" />
      <Compile Include="Assets\PeopleController.cs" />
@@ -60,6 +61,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
      <Compile Include="Assets\Scripts\Core\Player.cs" />
+     <Compile Include="Assets\Scripts\UI\Toolbar_UI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
      <Compile Include="Assets\PersonController.cs" />
@@ -76,6 +78,7 @@
      <Compile Include="Assets\MousePosition.cs" />
      <Compile Include="Assets\Scripts\Core\Movement.cs" />
      <Compile Include="Assets\CarMovement.cs" />
+     <Compile Include="Assets\Scripts\Core\Item.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\Manager\ItemManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
@@ -91,8 +94,6 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
-     <Compile Include="Assets\Scripts\ScriptableObjects\ItemData.cs" />
-     <Compile Include="Assets\Scripts\Core\Item.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
